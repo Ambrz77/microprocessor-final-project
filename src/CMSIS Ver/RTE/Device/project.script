@@ -1,0 +1,4 @@
+load STM32F401RETx 
+project name STCubeGenerated 
+project toolchain "MDK-ARM V5" 
+project path D:\CE SBU 96\Term 6\Microprocessor & Assembly\Final Project\CMSIS Ver\RTE\Device\STM32F401RETx\ 

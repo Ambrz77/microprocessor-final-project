@@ -1,0 +1,96 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.30.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Alireza Mahdi Barzi, SBU, LIC=8MZII-T8AAS-8YTVV-PKAJZ-4UUXV-QH412
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.30.0.0
+Toolchain Path:  D:\Program Files (x86)\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.30.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.3.0
+Dialog DLL:      TCM.DLL V1.42.0.0
+ 
+<h2>Project:</h2>
+D:\CE SBU 96\Term 6\Microprocessor & Assembly\Final Project\CMSIS Ver\FinalProj.uvprojx
+Project File Date:  07/14/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'D:\Program Files (x86)\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f401xe.s...
+RTE/Device/STM32F401RETx/system_stm32f4xx.c(138): warning: no previous extern declaration for non-static variable 'AHBPrescTable' [-Wmissing-variable-declarations]
+const uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+              ^
+RTE/Device/STM32F401RETx/system_stm32f4xx.c(138): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const uint8_t AHBPrescTable[16] = {0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9};
+      ^
+1 warning generated.
+compiling system_stm32f4xx.c...
+FinalProj.c(24): warning: unused variable 'a' [-Wunused-variable]
+                int a=0;
+                    ^
+FinalProj.c(97): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOB->MODER &= ~0x0000FC00;    /* clear pin mode */
+                 ~~ ^~~~~~~~~~~
+FinalProj.c(102): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOC->MODER &= ~0x0000FFFF;    /* clear pin mode */
+                 ~~ ^~~~~~~~~~~
+FinalProj.c(153): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOA->AFR[0] &= ~0xF000;
+                  ~~ ^~~~~~~
+FinalProj.c(155): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    GPIOA->MODER  &= ~0x00C0;
+                  ~~ ^~~~~~~
+FinalProj.c(176): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'char' [-Wimplicit-int-conversion]
+    return USART2->DR;
+    ~~~~~~ ~~~~~~~~^~
+6 warnings generated.
+compiling FinalProj.c...
+linking...
+Program Size: Code=1052 RO-data=420 RW-data=0 ZI-data=1632  
+FromELF: creating hex file...
+".\Objects\FinalProj.axf" - 0 Error(s), 7 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.7.0.pack
+                Keil.STM32F4xx_DFP.2.7.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.4.2
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  D:\Program Files (x86)\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  D:\Program Files (x86)\Arm\Packs\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.4.2
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f401xe.s
+      Source file:   MDK\Device\Source\ARM\STM32F401xx_OPT.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
